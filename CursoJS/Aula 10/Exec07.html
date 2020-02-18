@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Somando</title>
+    <style>
+        body{
+            background: brown;
+        }
+        div#result{
+            background: white;
+            width: 200px;
+            height: 200px;
+            color: blue;
+            font: bold 20pt Arial;
+            margin-left: 120px;
+            margin-top: 30px;
+            line-height: 200px;
+            text-align: center;
+        }
+        input{
+            width: 100px;
+            font: bold 15px Arial;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" name="texto" id="txtN1"/>
+    <input type="number" name="texto2" id="txtN2"/>
+    <input type="button" value="Somar" onclick="somar()"/>
+    
+    <div id="result">
+        Resultado...
+    </div>
+
+    <script>
+        function somar(){
+            var txtN1 = document.getElementById('txtN1')
+            var txtN2 = document.getElementById('txtN2')
+            var n1 = Number(txtN1.value)
+            var n2 = Number(txtN2.value)
+            var soma = n1+n2
+
+            var result = document.querySelector('div#result')
+            result.innerText=soma
+        }        
+    </script>
+</body>
+</html>
